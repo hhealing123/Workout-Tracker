@@ -9,6 +9,7 @@
 - [Final Thoughts](#final-thoughts)
 - [Utilized Resources](#utilized-resources)
 - [Contact](#contact)
+- [Links](#links)
 
 ## Description
 
@@ -40,13 +41,17 @@ SO THAT I can keep track of my workout performance
 If you have any questions... Please reach out to the following members of the project!!!
 
 ```
-Harvey Lee (hhealing123@gmail.com)
+Harvey Lee `hhealing123@gmail.com`
 
-John Kim (getitdonemin@gmail.com)
+John Kim `getitdonemin@gmail.com`
 
-Spencer ROss (spencerjpross@gmail.com)
+Spencer Ross `spencerjpross@gmail.com`
 
-Michael Diaz-Dominguez (michaelalexdiaz@gmail.com)
+Michael Diaz-Dominguez `michaelalexdiaz@gmail.com`
 
-Matteo Ramazzini (mramazzini123@gmail.com)
+Matteo Ramazzini `mramazzini123@gmail.com`
 ```
+
+## Links
+[Presentation]()
+[Deployed Application]()
