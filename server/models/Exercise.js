@@ -11,7 +11,7 @@ const exerciseSchema = new Schema({
   },
   equipment: {
     type: String,
-  }
+  },
 });
 
 module.exports = workoutSchema;
