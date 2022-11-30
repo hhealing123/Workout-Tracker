@@ -19,6 +19,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
+    maxlength: 12,
   },
   workouts: [
     {
@@ -26,9 +27,9 @@ const userSchema = new Schema({
       ref: 'Workouts',
     },
   ],
-  
 });
 
+// This sets up pre-save middleware to create password
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
@@ -38,6 +39,7 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+// This compares the incoming password with the hased password
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
