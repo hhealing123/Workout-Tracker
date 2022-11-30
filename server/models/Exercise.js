@@ -14,4 +14,5 @@ const exerciseSchema = new Schema({
   }
 });
 
-module.exports = workoutSchema;
+
+module.exports = exerciseSchema;
