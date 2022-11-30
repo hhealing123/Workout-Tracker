@@ -15,7 +15,7 @@ const typeDefs = gql`
 
   type Query {
     profiles: [User]!
-    matchups(_id: String): [Matchup]
+    profile(profileId: ID!): Profile
   }
 
   type Mutation {
