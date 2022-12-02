@@ -36,6 +36,14 @@ Type `npm install` to install necessary dependencies
 ## Utilized Resources
 [React Documentation](https://reactjs.org/docs/getting-started.html)
 
+[GraphQL Schemas & Types](https://graphql.org/learn/schema/)
+
+[GraphQL vs REST API](https://www.howtographql.com/basics/1-graphql-is-the-better-rest/)
+
+[React Hooks](https://www.freecodecamp.org/news/introduction-to-react-hooks/)
+
+[JWT Token](https://www.geeksforgeeks.org/json-web-token-jwt/)
+
 ## Demo Video & Project Image
 [Demo Video]()
 
@@ -55,4 +63,5 @@ If you have any questions... Please reach out to the following members of the pr
 
 ## Links
 [Presentation](https://docs.google.com/presentation/d/1asdS7HM_G4P5M6nCrnM07ltvIPwmdfz1-DbBlyPdmjc/edit#slide=id.g19df55e7cfc_0_130)
+
 [Deployed Application]()
