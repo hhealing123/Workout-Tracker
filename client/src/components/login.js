@@ -23,7 +23,14 @@ const login = () => {
             <h1>Sign In</h1>
             <form>
                 <label htmlFor="username">Username:</label>
-                <input type="text" name="" id="username" />
+                <input 
+                type="text" 
+                ref={userRef} 
+                id="username" 
+                autocomplete="off" 
+                onChange={(e) => setUser(e.target.value)}
+                value={user}
+                 />
             </form>
         </div>
     )
