@@ -1,13 +1,13 @@
 # Workout Tracker
 
 ## Table of Contents
-- [ListenToMe](#listentome)
+- [Workout Tracker](#workout-tracker)
 - [Table of Contents](#table-of-contents)
 - [Description](#description)
 - [User Story](#user-story)
-- [Installation & Usage](#installation--usage)
-- [Final Thoughts](#final-thoughts)
+- [Installation](#installation)
 - [Utilized Resources](#utilized-resources)
+- [Demo Video & Project Image](#demo-video--project-image)
 - [Contact](#contact)
 - [Links](#links)
 
@@ -26,16 +26,18 @@ I WANT an application that allows me to create my own workout routines and save 
 SO THAT I can keep track of my workout performance
 ```
 
-## Installation & Usage
+## Installation
 
 ```
 Type `npx create-react-app Workout-Tracker` in the terminal to install React
+Type `npm install` to install necessary dependencies
 ```
 
-## Final Thoughts
-
 ## Utilized Resources
-* [React Documentation](https://reactjs.org/docs/getting-started.html)
+[React Documentation](https://reactjs.org/docs/getting-started.html)
+
+## Demo Video & Project Image
+[Demo Video]()
 
 ## Contact
 
