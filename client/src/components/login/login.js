@@ -21,6 +21,10 @@ const login = () => {
         <div>
             <p ref={errRef} className={errMsg ? "errMsg" : "offscreeen"} aria-live="assertive"></p>
             <h1>Sign In</h1>
+            <form>
+                <label htmlFor="username">Username:</label>
+                <input type="text" name="" id="username" />
+            </form>
         </div>
     )
 }
