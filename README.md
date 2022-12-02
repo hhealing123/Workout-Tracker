@@ -64,4 +64,3 @@ If you have any questions... Please reach out to the following members of the pr
 ## Links
 [Presentation](https://docs.google.com/presentation/d/1asdS7HM_G4P5M6nCrnM07ltvIPwmdfz1-DbBlyPdmjc/edit#slide=id.g19df55e7cfc_0_130)
 
-[Deployed Application]()
