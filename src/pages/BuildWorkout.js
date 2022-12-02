@@ -6,6 +6,7 @@ import Arms from '../components/Arms';
 import Core from '../components/Core';
 import Workouts from '../components/Workouts';
 
+
 const BuildWorkout = (props) => {
     const [currentWorkouts, setWorkout] = useState([]);
     const addExercise = (e) => {
@@ -13,9 +14,12 @@ const BuildWorkout = (props) => {
       console.log(e.target.previousSibling.textContent)
       let clickedExercise = e.target.previousSibling.textContent;
       // setWorkout({...currentWorkouts, clickedExercise})
-      setWorkout([...currentWorkouts, clickedExercise]);
-      
+      setWorkout([...currentWorkouts, clickedExercise]);   
     }
+
+    // const deleteExercise = (clickedExercise) => {
+    //     setWorkout(clickedExercise.filter((clickedExercise) => clickedExercise==clickedExercise))
+    // }
 
   return (
     <header>
@@ -36,9 +40,9 @@ const BuildWorkout = (props) => {
             <div className="card">
                 <Core addExercise={addExercise}/>
             </div>
-            <aside>
-                <Workouts workoutArray={currentWorkouts}/>
-            </aside>    
+            <div className="card">
+                <Workouts workoutArray={currentWorkouts} setWorkout={setWorkout}/>
+            </div>    
         </div>
         <div className="footer">Go Back</div>
     </header>

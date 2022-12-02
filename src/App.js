@@ -1,6 +1,8 @@
 import React from 'react';
 import Workouts from './components/Workouts';
 import BuildWorkout from './pages/BuildWorkout';
+import Dashboard from './pages/Dashboard'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 
@@ -8,7 +10,22 @@ import BuildWorkout from './pages/BuildWorkout';
 function App() {
   return (
     <div className="container">
-      <BuildWorkout />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/dashboard'
+            element={<Dashboard />}
+          />
+        </Routes>
+      </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/builder'
+            element={<BuildWorkout />}
+          />
+        </Routes>
+      </BrowserRouter>
 
     </div>
   );

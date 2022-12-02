@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from 'react'
 
 // const workoutArray = [
 //     {
@@ -53,14 +54,39 @@ import React from 'react'
 //     },
 //   ]
 
-const Workouts = ({workoutArray}) => {
+function useForceUpdate(){
+  const [value, setValue] = useState(0); // integer state
+  return () => setValue(value => value + 1); // update state to force render
+}
+
+const Workouts = ({ workoutArray, setWorkout }) => {
+
+  const [value, setValue] = useState(0); // integer state
+
+  const makeButtonFunction = (i) => {
+    return () => {
+      console.log(i)
+      workoutArray.splice(i, 1)
+      console.log(workoutArray)
+      setWorkout(workoutArray)
+
+      // force update
+      setValue(value => value + 1)
+    }
+  };
+
+
   return (
-    <>
-        {workoutArray.map((workout) => (
+    <div className="card-inner">
+      <h2>Current Workout</h2>
+      {workoutArray.map((workout, i) => (
         // <h3 key={workoutArray.id} className="aside">{workoutArray.name}</h3>
-        <h3 className="aside">{workout}</h3>
-        ))}
-    </>
+        <div>
+        
+          <p>{workout}<button onClick={makeButtonFunction(i)} className='btn'>-</button></p>
+        </div>
+      ))}
+    </div>
   )
 }
 

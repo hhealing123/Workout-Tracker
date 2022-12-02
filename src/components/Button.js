@@ -9,7 +9,7 @@ const Button = ({addExercise}) => {
   //   setWorkout([...currentWorkouts, clickedExercise]);
   //   console.log(currentWorkouts)
   // }
-  return <button onClick={addExercise} className='btn'>Add</button>
+  return <button onClick={addExercise} className='btn'>+</button>
 }
 
 export default Button
