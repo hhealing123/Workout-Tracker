@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Workouts from './components/Workouts';
 import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
+import TodaysWorkout from './pages/TodaysWorkout';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login } from "./Login";
 import { Register } from "./Register";
@@ -32,6 +33,14 @@ function App() {
           <Route
             path='/login'
             element={<Login/>}
+          />
+        </Routes>
+      </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/todaysworkout'
+            element={<TodaysWorkout />}
           />
         </Routes>
       </BrowserRouter>
