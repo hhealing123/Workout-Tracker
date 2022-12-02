@@ -1,13 +1,25 @@
 const { Schema, model } = require('mongoose');
-const exerciseSchema = require('./Exercise');
+
 
 
 const workoutSchema = new Schema({
-  date: {
-    type: Date,
-    default: Date.now,
+  muscleWorked: {
+    type: String,
+    required: true,
   },
-  exercises: [exerciseSchema]
+  description: {
+    type: String,
+    maxLength: 200,
+  },
+  equipment: {
+    type: String,
+  },
+  reps:{
+    type: Integer,
+  },
+  weight:{
+    type: Integer
+  }
   
 });
 
