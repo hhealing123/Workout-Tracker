@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SelectReps = () => {
+const SelectRepsWeight = () => {
   return (
-    <div>
-        <label for="reps">Reps:</label>
+    <div className='repsWeight'>
+        <label for="reps">Reps:  </label>
             <select name="reps" id="reps">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -19,9 +19,13 @@ const SelectReps = () => {
                 <option value="12">12</option>
                 <option value="13">13</option>
                 <option value="14">14</option>
-            </select>
+            </select>  
+        <form className='weight'>
+            <label for="weight">Weight: &nbsp;</label>
+            <input type="text" id="weight" name="weight"></input>
+        </form>
     </div>
   )
 }
 
-export default SelectReps
+export default SelectRepsWeight
