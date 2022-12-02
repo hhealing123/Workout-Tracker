@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from "react";
 import Workouts from './components/Workouts';
 import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
+import { Login } from "./Login";
+import { Register } from "./Register";
+import './App.css';
 
 
 function App() {
@@ -26,7 +27,14 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/login'
+            element={<Login/>}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
