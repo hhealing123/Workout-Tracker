@@ -29,29 +29,28 @@ SO THAT I can keep track of my workout performance
 ## Installation & Usage
 
 ```
-
+Type `npx create-react-app Workout-Tracker` in the terminal to install React
 ```
 
 ## Final Thoughts
 
 ## Utilized Resources
+* [React Documentation](https://reactjs.org/docs/getting-started.html)
 
 ## Contact
 
 If you have any questions... Please reach out to the following members of the project!!!
 
-```
-Harvey Lee `hhealing123@gmail.com`
+[Harvey Lee](https://github.com/hhealing123)
 
-John Kim `getitdonemin@gmail.com`
+[John Kim](https://github.com/Getitdonemin)
 
-Spencer Ross `spencerjpross@gmail.com`
+[Spencer Ross](https://github.com/spencerjpross)
 
-Michael Diaz-Dominguez `michaelalexdiaz@gmail.com`
+[Michael Diaz-Dominguez](https://github.com/michaelalexdiaz)
 
-Matteo Ramazzini `mramazzini123@gmail.com`
-```
+[Matteo Ramazzini](https://github.com/mramazzini)
 
 ## Links
-[Presentation]()
+[Presentation](https://docs.google.com/presentation/d/1asdS7HM_G4P5M6nCrnM07ltvIPwmdfz1-DbBlyPdmjc/edit#slide=id.g19df55e7cfc_0_130)
 [Deployed Application]()
