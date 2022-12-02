@@ -154,3 +154,23 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.sleeve {
+    background: #fff;
+    font-size: 20px;
+    color: #468678;
+    border-radius: 5px;
+    padding: 35px 20px;
+    margin: 15px;
+    width: 325px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card-inner-today {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
