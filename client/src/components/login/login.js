@@ -20,6 +20,7 @@ const login = () => {
     return (
         <div>
             <p ref={errRef} className={errMsg ? "errMsg" : "offscreeen"} aria-live="assertive"></p>
+            <h1>Sign In</h1>
         </div>
     )
 }
