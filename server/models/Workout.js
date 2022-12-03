@@ -2,9 +2,6 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const workoutSchema = new Schema({
-  group_id: {
-    type: Number,
-  },
   createdAt: {
     type: Date,
     default: Date.now,
