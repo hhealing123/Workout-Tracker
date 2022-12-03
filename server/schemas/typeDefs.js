@@ -8,13 +8,13 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    workout: [Workout]!
+    workouts: [Workout]!
   }
 
   type Workout {
     _id: ID
     createdAt: String
-    exercise: [Exercise]!
+    exercises: [Exercise]!
   }
 
   type Exercise {
@@ -35,7 +35,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(username: String!): User
-    workout(username: String): [Workout]
+    workouts(username: String): [Workout]
     workout(workoutId: ID!): Workout
   }
 
