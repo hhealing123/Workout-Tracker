@@ -6,28 +6,27 @@ const expiration = '1h';
 
 module.exports = {
   // authMiddleware function will authenticate the routes
-  authMiddleware: function (req, res, next) {
-    // Allows token to be sent via req.query or headers
-    let token = req.query.token || req.headers.authorization;
+  authMiddleware: function ({ req }) {
+    // allows token to be sent via req.body, req.query, or headers
+    let token = req.body.token || req.query.token || req.headers.authorization;
 
+    // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
+
     if (!token) {
-      return res.status(400).json({ message: 'There is no token... Please try again!' });
+      return req;
     }
-    // Verify token and will get user data from it
+
     try {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch {
-      console.log('Invalid token... Please try again!');
-      return res.status(400).json({ message: "Invalid token... Please try again!" });
+      console.log('Invalid token');
     }
-    
-    // Allows to send to next end-point
-    next();
 
+    return req;
   },
 
   signToken: function ({ username, email, _id }) {
