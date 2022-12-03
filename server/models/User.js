@@ -20,10 +20,10 @@ const userSchema = new Schema({
     minlength: 5,
     maxlength: 12,
   },
-  exercises: [
+  workouts: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Workouts',
+      ref: 'Workout',
     },
   ],
 });
