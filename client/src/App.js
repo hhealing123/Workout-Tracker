@@ -4,8 +4,8 @@ import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
 import TodaysWorkout from './pages/TodaysWorkout';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Login } from "./Login";
-import { Register } from "./Register";
+import  Login  from "./pages/Login";
+
 import './App.css';
 import {
   ApolloClient,
