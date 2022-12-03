@@ -1,4 +1,4 @@
-const { User, Workout } = require('../models');
+const { User, Workout } = require('../../models');
 
 //COPY PASTED FOR REFERNECE
 

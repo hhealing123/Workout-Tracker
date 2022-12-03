@@ -1,26 +1,40 @@
 const { Schema, model } = require('mongoose');
-
-
+const dateFormat = require('../utils/dateFormat');
 
 const workoutSchema = new Schema({
-  muscleWorked: {
-    type: String,
-    required: true,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
-  description: {
-    type: String,
-    maxLength: 200,
-  },
-  equipment: {
-    type: String,
-  },
-  reps:{
-    type: Integer,
-  },
-  weight:{
-    type: Integer
-  }
-  
+  exercise: [
+    {
+      workout_name: {
+        type: String,
+        required: true,
+        unique: true,
+      },
+      muscles_worked: {
+        type: String,
+        required: true,
+      },
+      equipments: {
+        type: String,
+        require: true
+      },
+      description: {
+        type: String,
+        maxLength: 200,
+        unique: true,
+      },
+      sets: {
+        type: Number,
+      },
+      reps: {
+        type: Number,
+      },
+    },
+  ],
 });
 
 const Workout = model('Workout', workoutSchema);
