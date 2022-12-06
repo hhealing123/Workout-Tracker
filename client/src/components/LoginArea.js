@@ -1,38 +1,49 @@
 // import { useRef, useState, useEffect } from 'react';
 import React, { useRef, useState, useEffect } from 'react';
+import { LOGIN } from './utils/mutations';
+import { useMutation } from '@apollo/client';
+import Auth from './utils/auth';
 
-const LoginArea = () => {
-    const userRef = useRef();
-    const errRef = useRef();
+const LoginArea = (props) => {
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [login, { error }] = useMutation(LOGIN);
 
-    const [user, setUser] = useState('');
-    const [pwd, setPwd] = useState('');
-    const [errMsg, setErrMsg] = useState('');
-    const [succes, setSuccess] = useState(false);
 
-    useEffect(() => {
-        userRef.current.focus();
-    }, [])
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const mutationResponse = await login({
+              variables: { email: formState.email, password: formState.password },
+            });
+            const token = mutationResponse.data.login.token;
+            Auth.login(token);
+          } catch (e) {
+            console.log(e);
+          }
+    }
 
-    useEffect(() => {
-        setErrMsg('');
-    }, [user, pwd])
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+          ...formState,
+          [name]: value,
+        });
+      };
+
+
+
 
     return (
-        <div>
-            <p ref={errRef} className={errMsg ? "errMsg" : "offscreeen"} aria-live="assertive"></p>
-            <h1>Sign In</h1>
-            <form>
-                <label htmlFor="username">Username:</label>
-                <input 
-                type="text" 
-                ref={userRef} 
-                id="username" 
-                autocomplete="off" 
-                onChange={(e) => setUser(e.target.value)}
-                value={user}
-                 />
-            </form>
+        <div className="auth-form-container">
+            <h2>Login</h2>
+        <form className="login-form" onSubmit={handleSubmit}>
+            <label htmlFor="email">Email</label>
+            <input onChange={handleChange} type="email" placeholder="example@email.com" id="email" name="email" />
+            <label htmlFor="password">Password</label>
+            <input onChange={handleChange} type="password" placeholder="*********" id="password" name="password" />
+            <button type="submit">Log In</button>
+        </form>
+        <button className="link-btn" onClick={()=> props.onFormSwitch('register')}>Don't have an account? Register here</button>
         </div>
     )
 }
