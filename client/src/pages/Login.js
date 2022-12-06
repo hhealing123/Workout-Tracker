@@ -1,18 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import LoginArea from "../components/LoginArea"
+import LoginComponent from '../components/LoginComponent';
 
-const Logins = () => {
+const Login = () => {
     return (
-        <div className="App">
-            <h1>Hello</h1>
-            <LoginArea />
+        <div className='App'>
+            <LoginComponent />
         </div>
     )
 }
 
-export default Logins;
-
- {/* <div className="App">
-      {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
-      } */}
+export default Login;

@@ -3,11 +3,11 @@ import Workouts from './components/Workouts';
 import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
 import TodaysWorkout from './pages/TodaysWorkout';
-
+import RegisterPage from "./pages/RegisterPage";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Logins from "./pages/Login";
-import { Register } from "./Register";
-import { Login } from "./Login";
+import Login from "./pages/Login";
+import { Register } from "./components/Register";
+// import { Login } from "./components/LoginComponent";
 
 
 import './App.css';
@@ -53,15 +53,16 @@ function App() {
   return (
     <ApolloProvider client={client}>
 
+  {/* <div className="App">
+      {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+      }
+     */}
+
       <div className="container">
         <Router>
           <Routes>
 
-          {/* <div className="App">
-      {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
-      } */}
-    
    
           <Route
               path='/'
@@ -83,6 +84,10 @@ function App() {
               path='/todaysworkout'
               element={<TodaysWorkout />}
             />
+            <Route
+              path='/register'
+              element={<RegisterPage />}
+            />
           </Routes>
         </Router>
 
@@ -92,3 +97,5 @@ function App() {
   }
 
 export default App;
+
+    
