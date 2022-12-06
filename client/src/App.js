@@ -3,9 +3,12 @@ import Workouts from './components/Workouts';
 import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
 import TodaysWorkout from './pages/TodaysWorkout';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Login } from "./Login";
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import Logins from "./pages/Login";
 import { Register } from "./Register";
+import { Login } from "./Login";
+
 
 import './App.css';
 import {
@@ -49,46 +52,41 @@ function App() {
   }
   return (
     <ApolloProvider client={client}>
+
+      <div className="container">
+        <Router>
+          <Routes>
+
       <div className="App">
       {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
       }
     
-    </div>
-    <div className="container">
-      <BrowserRouter>
-        <Routes>
+   
           <Route
-            path='/dashboard'
-            element={<Dashboard />}
-          />
-        </Routes>
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/builder'
-            element={<BuildWorkout />}
-          />
-        </Routes>
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/login'
-            element={<Login/>}
-          />
-        </Routes>
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/todaysworkout'
-            element={<TodaysWorkout />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+              path='/'
+              element={<Logins />}
+            />
+            <Route
+              path='/dashboard'
+              element={<Dashboard />}
+            />
+            <Route
+              path='/builder'
+              element={<BuildWorkout />}
+            />
+            <Route
+              path='/login'
+              element={<Logins />}
+            />
+            <Route
+              path='/todaysworkout'
+              element={<TodaysWorkout />}
+            />
+          </Routes>
+        </Router>
+
+      </div>
     </ApolloProvider>
   );
   }

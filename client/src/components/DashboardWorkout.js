@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const DashboardWorkout = () => {
     return (
         <div className="card-inner-dashboard">
-            <a className="link" href="">Build A Workout</a>
+            <Link className="link" to="/builder">Build A Workout</Link>
         </div>
     )
 }
