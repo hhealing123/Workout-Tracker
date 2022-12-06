@@ -26,12 +26,27 @@ label {
   padding: 0.25 rem 0;
 }
 
-input {
+#name {
   margin: 0.5rem 0;
   padding: 1rem;
   border: none;
   border-radius: 10px;
 }
+
+#email {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
+#password {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
 
 button {
   border: none;

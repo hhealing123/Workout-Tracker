@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import LoginArea from "../components/LoginArea"
+import LoginComponent from '../components/LoginComponent';
 
-const Logins = () => {
+const Login = () => {
     return (
-        <div>
-            <h1>Hello</h1>
-            <LoginArea />
+        <div className='App'>
+            <LoginComponent />
         </div>
     )
 }
 
-export default Logins;
+export default Login;
