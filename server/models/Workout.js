@@ -12,7 +12,7 @@ const workoutSchema = new Schema({
       workout_name: {
         type: String,
         required: true,
-        unique: true,
+       
       },
       muscles_worked: {
         type: String,
@@ -25,7 +25,7 @@ const workoutSchema = new Schema({
       description: {
         type: String,
         maxLength: 200,
-        unique: true,
+        
       },
       sets: {
         type: Number,
@@ -33,6 +33,9 @@ const workoutSchema = new Schema({
       reps: {
         type: Number,
       },
+      weight:{
+        type:Number
+      }
     },
   ],
 });

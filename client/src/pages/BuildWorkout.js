@@ -9,13 +9,23 @@ import { Link } from 'react-router-dom';
 
 
 const BuildWorkout = (props) => {
-    const [currentWorkouts, setWorkout] = useState([]);
+
+    var storedworkouts = JSON.parse(localStorage.getItem("workouts"));
+    
+
+    const [currentWorkouts, setWorkout] = useState(storedworkouts);
     const addExercise = (e) => {
-        console.log(currentWorkouts)
+       // console.log(currentWorkouts)
         console.log(e.target.previousSibling.textContent)
         let clickedExercise = e.target.previousSibling.textContent;
         // setWorkout({...currentWorkouts, clickedExercise})
         setWorkout([...currentWorkouts, clickedExercise]);
+
+        //Get new workouts array add store in localstorage
+        const tempWorkout = currentWorkouts;
+        tempWorkout.push(clickedExercise);
+        localStorage.setItem("workouts", JSON.stringify(tempWorkout));
+        
     }
 
     // const deleteExercise = (clickedExercise) => {

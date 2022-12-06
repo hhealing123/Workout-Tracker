@@ -25,6 +25,7 @@ const typeDefs = gql`
     description: String
     sets: Int
     reps: Int
+    weight: Int
   }
 
   type Auth {
@@ -50,6 +51,7 @@ const typeDefs = gql`
       description: String!
       sets: Int
       reps: Int
+      weight: Int
     ): Workout
     removeWorkout(workoutId: ID!): Workout
   }
