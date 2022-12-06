@@ -3,8 +3,8 @@ import Workouts from './components/Workouts';
 import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
 import TodaysWorkout from './pages/TodaysWorkout';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import  Login  from "./pages/Login";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Logins from "./pages/Login";
 
 import './App.css';
 import {
@@ -43,40 +43,33 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <div className="container">
-      <BrowserRouter>
-        <Routes>
+      <div className="container">
+        <Router>
+          <Routes>
           <Route
-            path='/dashboard'
-            element={<Dashboard />}
-          />
-        </Routes>
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/builder'
-            element={<BuildWorkout />}
-          />
-        </Routes>
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/login'
-            element={<Login/>}
-          />
-        </Routes>
-      </BrowserRouter>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/todaysworkout'
-            element={<TodaysWorkout />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+              path='/'
+              element={<Logins />}
+            />
+            <Route
+              path='/dashboard'
+              element={<Dashboard />}
+            />
+            <Route
+              path='/builder'
+              element={<BuildWorkout />}
+            />
+            <Route
+              path='/login'
+              element={<Logins />}
+            />
+            <Route
+              path='/todaysworkout'
+              element={<TodaysWorkout />}
+            />
+          </Routes>
+        </Router>
+
+      </div>
     </ApolloProvider>
   );
 }

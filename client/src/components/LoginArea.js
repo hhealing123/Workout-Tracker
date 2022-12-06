@@ -1,6 +1,7 @@
-import { useRef, useState, useEffect } from 'react';
+// import { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 
-const login = () => {
+const LoginArea = () => {
     const userRef = useRef();
     const errRef = useRef();
 
@@ -14,7 +15,7 @@ const login = () => {
     }, [])
 
     useEffect(() => {
-        setErrMeg('');
+        setErrMsg('');
     }, [user, pwd])
 
     return (
@@ -36,4 +37,4 @@ const login = () => {
     )
 }
 
-export default login
+export default LoginArea
