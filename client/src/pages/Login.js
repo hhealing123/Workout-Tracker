@@ -3,7 +3,7 @@ import LoginArea from "../components/LoginArea"
 
 const Logins = () => {
     return (
-        <div>
+        <div className="App">
             <h1>Hello</h1>
             <LoginArea />
         </div>
@@ -11,3 +11,8 @@ const Logins = () => {
 }
 
 export default Logins;
+
+ {/* <div className="App">
+      {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+      } */}

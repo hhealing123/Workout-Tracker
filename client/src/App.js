@@ -5,7 +5,7 @@ import Dashboard from './pages/Dashboard'
 import TodaysWorkout from './pages/TodaysWorkout';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import Logins from "./pages/Login";
+import Logins from "./pages/Login";
 import { Register } from "./Register";
 import { Login } from "./Login";
 
@@ -57,15 +57,15 @@ function App() {
         <Router>
           <Routes>
 
-      <div className="App">
+          {/* <div className="App">
       {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
-      }
+      } */}
     
    
           <Route
               path='/'
-              element={<Logins />}
+              element={<Login />}
             />
             <Route
               path='/dashboard'
@@ -77,7 +77,7 @@ function App() {
             />
             <Route
               path='/login'
-              element={<Logins />}
+              element={<Login />}
             />
             <Route
               path='/todaysworkout'
