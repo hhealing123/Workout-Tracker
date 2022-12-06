@@ -21,7 +21,7 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, args) => {
-      console.log('allo');
+      
       const user = await User.create(args);
       const token = signToken(user);
       return { token, user };
@@ -44,19 +44,17 @@ const resolvers = {
       return { token, user };
     },
     addWorkout: async (parent, exercise, context) => {
-      const workout = await Workout.create(exercise);
-
-      await User.findOneAndUpdate(
+      
+      const { _id} = await Workout.create(exercise);
+      const user = await User.findOneAndUpdate(
         { _id: context.user._id },
-        // Check this part 
-         
-         { $addToSet: {workouts:workout._id} }, 
-        
         {
-          new: true,
-          runValidators: true,
+          $addToSet: {
+            workout: _id,
+          },
         }
       );
+
 
       return workout;
     },
