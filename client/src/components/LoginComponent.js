@@ -1,5 +1,6 @@
 // import { useRef, useState, useEffect } from 'react';
 import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import { LOGIN } from './utils/mutations';
 import { useMutation } from '@apollo/client';
 import Auth from './utils/auth';
@@ -43,7 +44,7 @@ const LoginArea = (props) => {
             <input onChange={handleChange} type="password" placeholder="*********" id="password" name="password" />
             <button type="submit">Log In</button>
         </form>
-        <button className="link-btn" onClick={()=> props.onFormSwitch('register')}>Don't have an account? Register here</button>
+        <Link className="link-btn" to="/register">Don't have an account? Register here!</Link>
         </div>
     )
 }
