@@ -29,3 +29,21 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_WORKOUT = gql`
+mutation addWorkout($exercise : [Exercises]!) {
+  addWorkout(exercise: $exercise){
+    createdAt
+    exercise {
+      workout_name
+      muscles_worked
+      equipments
+      description
+      sets
+      reps
+      weight
+    }
+
+  } 
+}
+`

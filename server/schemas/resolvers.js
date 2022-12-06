@@ -43,15 +43,15 @@ const resolvers = {
 
       return { token, user };
     },
-    addWorkout: async (parent, { workoutId, workout_name, muscles_worked, equipments, description, sets, reps }) => {
-      const workout = await Workout.create({ workoutId, workout_name, muscles_worked, equipments, description, sets, reps });
+    addWorkout: async (parent, exercise, context) => {
+      const workout = await Workout.create(exercise);
 
       await User.findOneAndUpdate(
-        { _id: workoutId },
+        { _id: context.user._id },
         // Check this part 
-        { 
-          $addToSet: { exercise: { workoutId, workout_name, muscles_worked, equipments, description, sets, reps } }, 
-        },
+         
+         { $addToSet: {workouts:workout._id} }, 
+        
         {
           new: true,
           runValidators: true,

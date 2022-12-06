@@ -8,65 +8,16 @@ import SelectRepsWeight from './SelectRepsWeight';
 // ]
 
 const TodaysWorkoutList = () => {
-
-    const [exercises, setExercises] = useState([
-        {
-            "name": "Bench Press",
-            "addRow": false,
-            "numberOfSets": 1
-        },
-        {
-            "name": "Chest Fly",
-            "addRow": false,
-            "numberOfSets": 1
-        },
-        {
-            "name": "Push-Ups",
-            "addRow": false,
-            "numberOfSets": 1
-        },        {
-            "name": "Incline Press",
-            "addRow": false,
-            "numberOfSets": 1
-        },
-        {
-            "name": "Decline Press",
-            "addRow": false,
-            "numberOfSets": 1
-        },
-        // {
-        //     "name": "Bicycle Crunch",
-        //     "addRow": false,
-        //     "numberOfSets": 1
-        // },
-        // {
-        //     "name": "Leg Raises",
-        //     "addRow": false,
-        //     "numberOfSets": 1
-        // },
-        // {
-        //     "name": "Oblique Crunch",
-        //     "addRow": false,
-        //     "numberOfSets": 1
-        // },
-        // {
-        //     "name": "Reverse Crunch",
-        //     "addRow": false,
-        //     "numberOfSets": 1
-        // },
-        // {
-        //     "name": "Russian Twist",
-        //     "addRow": false,
-        //     "numberOfSets": 1
-        // },
-    ]);
+    var storedworkouts = JSON.parse(localStorage.getItem("workouts"));
+    console.log(storedworkouts);
+    const [exercises, setExercises] = useState(storedworkouts);
 
     return (
         <div className="card-inner-today">
             {exercises.map((exercise, i) => (
                 <>
                     <div className='sleeve'>
-                        <p>{exercise.name}</p> <SelectSet exercises={exercises} setExercises={setExercises} i={i} /> <SelectRepsWeight /> 
+                        <p>{exercise}</p> <SelectSet exercises={exercises} setExercises={setExercises} i={i} /> <SelectRepsWeight /> 
                         {exercise.numberOfSets === 2 ? <><SelectRepsWeight /></> : exercise.numberOfSets === 3 ? <><SelectRepsWeight /><SelectRepsWeight /></> : exercise.numberOfSets === 4 ? <><SelectRepsWeight /><SelectRepsWeight /><SelectRepsWeight /></> : exercise.numberOfSets === 5 ? <><SelectRepsWeight /><SelectRepsWeight /><SelectRepsWeight /><SelectRepsWeight /></> : ""}
                     </div>
                 </>
