@@ -5,10 +5,7 @@ import { useMutation } from '@apollo/client';
 import Auth from './utils/auth';
 
 const LoginArea = (props) => {
-    const userRef = useRef();
-    const errRef = useRef();
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+    const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error }] = useMutation(LOGIN);
 
 
@@ -16,7 +13,7 @@ const LoginArea = (props) => {
         e.preventDefault();
         try {
             const mutationResponse = await login({
-              variables: { email: email.email, password: pass.password },
+              variables: { email: formState.email, password: formState.password },
             });
             const token = mutationResponse.data.login.token;
             Auth.login(token);
@@ -24,27 +21,26 @@ const LoginArea = (props) => {
             console.log(e);
           }
     }
-    const [user, setUser] = useState('');
-    const [pwd, setPwd] = useState('');
-    const [errMsg, setErrMsg] = useState('');
-    const [succes, setSuccess] = useState(false);
 
-    useEffect(() => {
-        userRef.current.focus();
-    }, [])
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+          ...formState,
+          [name]: value,
+        });
+      };
 
-    useEffect(() => {
-        setErrMsg('');
-    }, [user, pwd])
+
+
 
     return (
         <div className="auth-form-container">
             <h2>Login</h2>
         <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="example@email.com" id="email" name="email" />
+            <input onChange={handleChange} type="email" placeholder="example@email.com" id="email" name="email" />
             <label htmlFor="password">Password</label>
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*********" id="password" name="password" />
+            <input onChange={handleChange} type="password" placeholder="*********" id="password" name="password" />
             <button type="submit">Log In</button>
         </form>
         <button className="link-btn" onClick={()=> props.onFormSwitch('register')}>Don't have an account? Register here</button>

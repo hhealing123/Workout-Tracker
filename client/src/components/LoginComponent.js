@@ -1,27 +1,51 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom'
+// import { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { LOGIN } from './utils/mutations';
+import { useMutation } from '@apollo/client';
+import Auth from './utils/auth';
 
-export const LoginComponent = (props) =>{
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+const LoginArea = (props) => {
+    const [formState, setFormState] = useState({ email: '', password: '' });
+    const [login, { error }] = useMutation(LOGIN);
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
+        try {
+            const mutationResponse = await login({
+              variables: { email: formState.email, password: formState.password },
+            });
+            const token = mutationResponse.data.login.token;
+            Auth.login(token);
+          } catch (e) {
+            console.log(e);
+          }
     }
-    return(
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormState({
+          ...formState,
+          [name]: value,
+        });
+      };
+
+
+
+
+    return (
         <div className="auth-form-container">
             <h2>Login</h2>
         <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="example@email.com" id="email" name="email" />
+            <input onChange={handleChange} type="email" placeholder="example@email.com" id="email" name="email" />
             <label htmlFor="password">Password</label>
-            <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="*********" id="password" name="password" />
+            <input onChange={handleChange} type="password" placeholder="*********" id="password" name="password" />
             <button type="submit">Log In</button>
         </form>
-        <Link className="link-btn" to="/register">Don't have an account? Register here</Link>
+        <button className="link-btn" onClick={()=> props.onFormSwitch('register')}>Don't have an account? Register here</button>
         </div>
     )
 }
 
-export default LoginComponent
+export default LoginArea
