@@ -11,21 +11,54 @@ const TodaysWorkoutList = () => {
 
     const [exercises, setExercises] = useState([
         {
+            "name": "Bench Press",
+            "addRow": false,
+            "numberOfSets": 1
+        },
+        {
+            "name": "Chest Fly",
+            "addRow": false,
+            "numberOfSets": 1
+        },
+        {
             "name": "Push-Ups",
             "addRow": false,
             "numberOfSets": 1
-        },
-        {
-            "name": "Chest Press",
-            "addRow": false,
-            "numberOfSets": 1
-        },
-        {
+        },        {
             "name": "Incline Press",
             "addRow": false,
             "numberOfSets": 1
         },
-
+        {
+            "name": "Decline Press",
+            "addRow": false,
+            "numberOfSets": 1
+        },
+        // {
+        //     "name": "Bicycle Crunch",
+        //     "addRow": false,
+        //     "numberOfSets": 1
+        // },
+        // {
+        //     "name": "Leg Raises",
+        //     "addRow": false,
+        //     "numberOfSets": 1
+        // },
+        // {
+        //     "name": "Oblique Crunch",
+        //     "addRow": false,
+        //     "numberOfSets": 1
+        // },
+        // {
+        //     "name": "Reverse Crunch",
+        //     "addRow": false,
+        //     "numberOfSets": 1
+        // },
+        // {
+        //     "name": "Russian Twist",
+        //     "addRow": false,
+        //     "numberOfSets": 1
+        // },
     ]);
 
     return (

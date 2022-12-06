@@ -6,7 +6,8 @@ import TodaysWorkout from './pages/TodaysWorkout';
 import RegisterPage from "./pages/RegisterPage";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login";
-import { Register } from "./components/Register";
+import PastWorkoutsPage from "./pages/PastWorkoutsPage";
+// import { Register } from "./components/Register";
 // import { Login } from "./components/LoginComponent";
 
 
@@ -18,6 +19,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -46,14 +48,14 @@ const client = new ApolloClient({
 
 function App() {
   const [currentForm, setCurrentForm] = useState('Login');
-  
+
   const toggleForm = (formName) => {
     setCurrentForm(formName);
   }
   return (
     <ApolloProvider client={client}>
 
-  {/* <div className="App">
+      {/* <div className="App">
       {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
       }
@@ -62,9 +64,7 @@ function App() {
       <div className="container">
         <Router>
           <Routes>
-
-   
-          <Route
+            <Route
               path='/'
               element={<Login />}
             />
@@ -88,14 +88,17 @@ function App() {
               path='/register'
               element={<RegisterPage />}
             />
+             <Route
+              path='/pastworkouts'
+              element={<PastWorkoutsPage />}
+            />
           </Routes>
         </Router>
 
       </div>
     </ApolloProvider>
   );
-  }
+}
 
 export default App;
 
-    
