@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import LoginArea from "../components/LoginArea"
+import React from 'react';
+
 import LoginComponent from '../components/LoginComponent';
 
 const Login = () => {

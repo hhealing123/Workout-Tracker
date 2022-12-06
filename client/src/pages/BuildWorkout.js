@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom';
 
 
 const BuildWorkout = (props) => {
-
-    var storedworkouts = JSON.parse(localStorage.getItem("workouts"));
+    
+   
     
 
-    const [currentWorkouts, setWorkout] = useState(storedworkouts);
+    const [currentWorkouts, setWorkout] = useState([]);
     const addExercise = (e) => {
        // console.log(currentWorkouts)
         console.log(e.target.previousSibling.textContent)

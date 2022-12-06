@@ -20,11 +20,11 @@ const workoutSchema = new Schema({
       },
       equipments: {
         type: String,
-        require: true
+        required: true
       },
       description: {
         type: String,
-        maxLength: 200,
+        
         
       },
       sets: {
