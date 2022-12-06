@@ -4,7 +4,8 @@ import BuildWorkout from './pages/BuildWorkout';
 import Dashboard from './pages/Dashboard'
 import TodaysWorkout from './pages/TodaysWorkout';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import  Login  from "./pages/Login";
+import { Login } from "./Login";
+import { Register } from "./Register";
 
 import './App.css';
 import {
@@ -41,8 +42,19 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [currentForm, setCurrentForm] = useState('Login');
+  
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
   return (
     <ApolloProvider client={client}>
+      <div className="App">
+      {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm}/>
+      }
+    
+    </div>
     <div className="container">
       <BrowserRouter>
         <Routes>
@@ -79,6 +91,6 @@ function App() {
     </div>
     </ApolloProvider>
   );
-}
+  }
 
 export default App;
