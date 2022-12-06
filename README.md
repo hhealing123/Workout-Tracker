@@ -14,8 +14,12 @@
 ## Description
 
 ```
-Workout is a session of vigorous physical training that enhances one's fitness for athletic competition, ability, or performance. Working out is one of a way to maintain healthy lifestyle, as well as to improve ability to do everyday activities. Working out may look easy; lift, pull, push, and etc. However, if done incorrectly, such as incorrect forms, not having efficient workout routines,
-or using improper equipments, our body will get damaged and will eventually in pain. This application is designed to help the amateur to professional gym goers to create workouts easily and view their workout history all in one app. The user will be able to seamlessly select different workouts to build their WOD (Workout Of the Day), and then add in the number of sets and reps they did of each workout before completing their workout and saving it to their workout history. 
+Workout is a session of vigorous physical training that enhances one's fitness for athletic competition, ability, or performance. 
+Working out is one of a way to maintain healthy lifestyle, as well as to improve ability to do everyday activities. 
+Working out may look easy; lift, pull, push, and etc. 
+However, if done incorrectly, such as incorrect forms, not having efficient workout routines, or using improper equipments, our body will get damaged and will eventually in pain. 
+This application is designed to help the amateur to professional gym goers to create workouts easily and view their workout history all in one app. 
+The user will be able to seamlessly select different workouts to build their WOD (Workout Of the Day), and then add in the number of sets and reps they did of each workout before completing their workout and saving it to their workout history. 
 ```
 
 ## User Story
