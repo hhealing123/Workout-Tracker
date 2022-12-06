@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 const PastWorkoutsPage = () => {
     return (
-        <div>
+         <div>
             <h1 className='header'>Workout History</h1>
-            <PastWorkouts />
+            <div className="cards-wrap">
+                <PastWorkouts />
+            </div>
             <div className='footer2'>
                 <Link to="/dashboard">Go Back</Link>
             </div>
