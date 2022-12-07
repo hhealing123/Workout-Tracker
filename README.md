@@ -49,12 +49,12 @@ Type `npm install` to install necessary dependencies
 [JWT Token](https://www.geeksforgeeks.org/json-web-token-jwt/)
 
 ## Demo Video & Project Image
-[Demo Video](https://user-images.githubusercontent.com/106945679/206066459-f3ff8915-c093-4ac0-8918-239d3a9e6a2e.webm)
-https://user-images.githubusercontent.com/106945679/206067119-4d765e7d-605c-4dc7-88ea-b5a59435593e.JPG
-https://user-images.githubusercontent.com/106945679/206067136-6836c74e-3d33-44d4-af58-6b65e4bc672f.JPG
-https://user-images.githubusercontent.com/106945679/206067151-cc59f11a-0250-44fc-b22b-59d41ff3b7ec.JPG
-https://user-images.githubusercontent.com/106945679/206067160-8c743bc2-f4bf-4be3-9a39-623f1917712f.JPG
-https://user-images.githubusercontent.com/106945679/206067174-308e444f-c5d4-44aa-adde-17d8c36fbe25.JPG
+* [Demo Video](https://user-images.githubusercontent.com/106945679/206066459-f3ff8915-c093-4ac0-8918-239d3a9e6a2e.webm)
+* [Login](https://user-images.githubusercontent.com/106945679/206067119-4d765e7d-605c-4dc7-88ea-b5a59435593e.JPG)
+* [Register](https://user-images.githubusercontent.com/106945679/206067136-6836c74e-3d33-44d4-af58-6b65e4bc672f.JPG)
+* [Dashboard](https://user-images.githubusercontent.com/106945679/206067151-cc59f11a-0250-44fc-b22b-59d41ff3b7ec.JPG)
+* [Build Workout](https://user-images.githubusercontent.com/106945679/206067160-8c743bc2-f4bf-4be3-9a39-623f1917712f.JPG)
+* [History](https://user-images.githubusercontent.com/106945679/206067174-308e444f-c5d4-44aa-adde-17d8c36fbe25.JPG)
 
 ## Contact
 
