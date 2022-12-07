@@ -14,10 +14,10 @@
 ## Description
 
 ```
-Workout is a session of vigorous physical training that enhances one's fitness for athletic competition, ability, or performance. 
-Working out is one of a way to maintain healthy lifestyle, as well as to improve ability to do everyday activities. 
-Working out may look easy; lift, pull, push, and etc. 
+Workout is a session of vigorous physical training that enhances one's fitness for athletic competition, ability, or performance. Working out is one of a way to maintain healthy lifestyle, as well as to improve ability to do everyday activities. Working out may look easy; lift, pull, push, and etc. 
+
 However, if done incorrectly, such as incorrect forms, not having efficient workout routines, or using improper equipments, our body will get damaged and will eventually in pain. 
+
 This application is designed to help the amateur to professional gym goers to create workouts easily and view their workout history all in one app. 
 The user will be able to seamlessly select different workouts to build their WOD (Workout Of the Day), and then add in the number of sets and reps they did of each workout before completing their workout and saving it to their workout history. 
 ```
@@ -50,7 +50,11 @@ Type `npm install` to install necessary dependencies
 
 ## Demo Video & Project Image
 [Demo Video](https://user-images.githubusercontent.com/106945679/206066459-f3ff8915-c093-4ac0-8918-239d3a9e6a2e.webm)
-
+[Login](https://user-images.githubusercontent.com/106945679/206067119-4d765e7d-605c-4dc7-88ea-b5a59435593e.JPG)
+[Register](https://user-images.githubusercontent.com/106945679/206067136-6836c74e-3d33-44d4-af58-6b65e4bc672f.JPG)
+[Dashboard](https://user-images.githubusercontent.com/106945679/206067151-cc59f11a-0250-44fc-b22b-59d41ff3b7ec.JPG)
+[Build Workout](https://user-images.githubusercontent.com/106945679/206067160-8c743bc2-f4bf-4be3-9a39-623f1917712f.JPG)
+[History](https://user-images.githubusercontent.com/106945679/206067174-308e444f-c5d4-44aa-adde-17d8c36fbe25.JPG)
 
 ## Contact
 
