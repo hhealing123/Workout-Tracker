@@ -3,7 +3,7 @@ import SelectSet from './SelectSet';
 import SelectRepsWeight from './SelectRepsWeight';
 import { Link } from 'react-router-dom'
 import Auth from './utils/auth'
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { ADD_WORKOUT } from '../components/utils/mutations';
 import { useMutation } from '@apollo/client';
@@ -12,8 +12,6 @@ const TodaysWorkoutList = () => {
     var storedworkouts = JSON.parse(localStorage.getItem("workouts"));
     const [exercises, setExercises] = useState(storedworkouts);
 
-
-    // const [formState, setFormState] = useState({ email: '', password: '' });
     const [workout, { error }] = useMutation(ADD_WORKOUT);
 
     
@@ -64,7 +62,7 @@ const TodaysWorkoutList = () => {
             </div>
             <div className='footer2'>
                 <Link to="/builder">Go Back</Link>
-                <Link to="/dashboard" onClick={storeWorkout} className="link" >Save</Link>
+                <Link to="/dashboard">Save</Link>
 
             </div>
         </div>
