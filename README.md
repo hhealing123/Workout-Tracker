@@ -49,7 +49,8 @@ Type `npm install` to install necessary dependencies
 [JWT Token](https://www.geeksforgeeks.org/json-web-token-jwt/)
 
 ## Demo Video & Project Image
-[Demo Video](https://drive.google.com/file/d/1KZow0NismG0-UzeEdt3bLfqxL3dxxXos/view)
+[Demo Video](https://user-images.githubusercontent.com/106945679/206066459-f3ff8915-c093-4ac0-8918-239d3a9e6a2e.webm)
+
 
 ## Contact
 
